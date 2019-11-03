@@ -6,7 +6,7 @@
 // maxChar("apple 1231111") === "1"
 
 function maxChar(str) {
-    const charMap = {};//Caharcter map
+    const charMap = {};//Character map
     let max = 0;
     let maxChar ='';
     //populate map with char-frequency pairs for each character in str
