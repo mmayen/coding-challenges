@@ -17,6 +17,21 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
-
+function steps(n) {
+    // build level
+    for(let row = 0; row < n; row++){
+        let steps = '';
+    // fills hash
+      for(let col = 0; col < n; col++){
+        if(col <= row){
+            steps += '#';
+        } else{
+            steps += ' ';
+        }
+        console.log("step " + row);
+      }
+      console.log(steps);
+    }
+}
+console.log(steps(5));
 module.exports = steps;
