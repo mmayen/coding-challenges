@@ -8,6 +8,36 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+function charMap(str) {
+    const charMap={};
+    //iterate through each char of string
+    for(let char of str.replace(/[^\w]/g, '').toLowerCase()){
+        /* check if key value exist and increment
+          else initialize to 1
+        */
+        if(charMap[char]){
+            charMap[char]= charMap[char]+1
+        } else{
+            charMap[char]= 1;
+        }
+    }
+return charMap;
+}
 
-module.exports = anagrams;
+function anagram(stringA, stringB){
+    const charMapA = charMap(stringA);
+    const charMapB = charMap(stringB);
+    //check if length of both charmap objects are the same 
+     if(Object.keys(charMapA).length !== Object.keys(charMapB).length){
+         return false;
+     }
+     //check if the value for each key(aka characters) of both charMap objects are the same
+     for(let char in charMapA){
+         if(charMapA[char] !== charMapB[char]){
+             return false;
+         }
+     }
+     return true;
+}
+module.exports = anagram;
+console.log(anagram("mmayen", "Mmayen"));
