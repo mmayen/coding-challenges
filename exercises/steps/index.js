@@ -20,15 +20,17 @@
 function steps(n) {
     // build level
     for(let row = 0; row < n; row++){
-        let steps = '';
-    // fills hash
+      let steps = '';
+      // fills hash
       for(let col = 0; col < n; col++){
+        /* if current column is less than or equal to
+            current row then fill the spot with # 
+            else fill with empty space*/
         if(col <= row){
             steps += '#';
         } else{
             steps += ' ';
         }
-        console.log("step " + row);
       }
       console.log(steps);
     }
