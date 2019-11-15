@@ -29,7 +29,7 @@ class LinkedList {
     }
 
     getFirst() {
-        
+        return this.head;
     }
 }
 
