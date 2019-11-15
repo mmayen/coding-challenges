@@ -8,7 +8,7 @@
 function maxChar(str) {
     const charMap = {};//Character map
     let max = 0;
-    let maxChar ='';
+    let maxChar = '';
     //populate map with char-frequency pairs for each character in str
     for(let char of str){
         charMap[char] = charMap[char]+ 1 || 1;
@@ -16,7 +16,7 @@ function maxChar(str) {
     //check for max frequency 
     for(let char in charMap){
         if(charMap[char] > max){
-            max =charMap[char];
+            max = charMap[char];
             maxChar = char;
         }
     }
