@@ -19,6 +19,7 @@ function chunk(array, size) {
         }
     }
     return chunked; */
+    
     const chunked = [];
     let index = 0;
     while(index < array.length){
