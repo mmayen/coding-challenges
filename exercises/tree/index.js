@@ -42,7 +42,7 @@ class Tree {
             fn(currNode);
         }
     }
-
+    
     traverseDF(fn) {
         let holdingArr = [this.root];
 
@@ -50,7 +50,7 @@ class Tree {
             const currNode = holdingArr.shift();
             holdingArr.unshift(...currNode.children);
             fn(currNode);
-        }
+        }  
     }
 }
 
